@@ -1,0 +1,57 @@
+[
+  {
+    "text": "Components",
+    "heading": "true",
+    "translate": "sidebar.heading.COMPONENTS"
+  },
+  {
+    "text": "Font Icons",
+    "sref": "app.icons-font",
+    "icon": "icon-chemistry",
+    "alert": "+400",
+    "translate": "sidebar.nav.element.FONT_ICON"
+  },
+  {
+    "text": "Colors",
+    "sref": "app.colors",
+    "icon": "icon-chemistry",
+    "translate": "sidebar.nav.element.COLOR"
+    },
+  {
+    "text": "More",
+    "heading": "true",
+    "translate": "sidebar.heading.MORE"
+  },
+  {
+    "text": "Pages",
+    "sref": "#",
+    "icon": "icon-doc",
+    "submenu": [
+      { "text": "Login",            "sref": "page.login", "translate": "sidebar.nav.pages.LOGIN" },
+      { "text": "Sign up",          "sref": "page.register", "translate": "sidebar.nav.pages.REGISTER" },
+      { "text": "Recover Password", "sref": "page.recover", "translate": "sidebar.nav.pages.RECOVER" },
+      { "text": "Lock",             "sref": "page.lock", "translate": "sidebar.nav.pages.LOCK" },
+      { "text": "Starter Template", "sref": "app.template", "translate": "sidebar.nav.pages.STARTER" },
+      { "text": "404", "sref": "page.404" }
+    ],
+    "translate": "sidebar.nav.pages.PAGES"
+  },
+  {
+    "text": "Tareas",
+    "sref": "app.todo",
+    "icon": "icon-cup",
+    "translate": "sidebar.nav.extra.TODO"
+  },
+  {
+    "text": "Template",
+    "sref": "app.template",
+    "icon": "icon-doc",
+    "translate": ""
+  },
+  {
+    "text": "Documentation",
+    "sref": "app.documentation",
+    "icon": "icon-graduation",
+    "translate": "sidebar.nav.DOCUMENTATION"
+  }
+]
