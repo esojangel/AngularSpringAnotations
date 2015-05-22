@@ -10,4 +10,8 @@ public class MainCtrl {
 	public String home(){
 		return "index";
 	}
+	@RequestMapping("/app")
+	public String app(){
+		return "app";
+	}
 }

@@ -10,7 +10,7 @@
         .state('app', {
             url: '/app',
             abstract: true,
-            templateUrl: helper.basepath('app.html'),
+            templateUrl: "./app",
             controller: 'AppController',
             resolve: helper.resolveFor('fastclick', 'modernizr', 'icons', 'screenfull', 'animo', 'sparklines', 'slimscroll', 'classyloader', 'toaster', 'whirl')
         })
@@ -30,7 +30,8 @@
             url: '/todo',
             title: 'Todo List',
             templateUrl: helper.basepath('todo.html'),
-            controller: 'TodoController'
+            controller: 'TodoCtrl',
+            resolve: helper.resolveFor('app.tareas')
         })
         .state('app.template', {
             url: '/template',
@@ -96,5 +97,36 @@
         // })
         ;
     }])
+    .run(['$rootScope',function ($rootScope) {
+      // Uncomment this to disables template cache
+      /*$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+      if (typeof(toState) !== 'undefined'){
+      $templateCache.remove(toState.templateUrl);
+      }
+      });*/
+
+      // Scope Globals
+      // -----------------------------------
+      $rootScope.app = {
+        name: 'AngularSpring',
+        description: 'AngularSpringSeed',
+        year: ((new Date()).getFullYear()),
+        layout: {
+          isFixed: true,
+          isCollapsed: false,
+          isBoxed: false,
+          isRTL: false
+        },
+        useFullLayout: false,
+        hiddenFooter: false,
+        viewAnimation: 'ng-fadeInUp'
+      };
+      $rootScope.user = {
+        name:     'Jose Angel',
+        job:      'ng-Dev',
+        picture:  'public/app/img/user/02.jpg'
+      };
+
+    }]);
 
 })(angular);
